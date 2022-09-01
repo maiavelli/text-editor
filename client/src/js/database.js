@@ -47,8 +47,10 @@ export const getDb = async () => {
   const request = store.getAll();
 
   const result = await request;
-  console.log('result.value', result);
-
+  result
+    ? console.log('Data retrieved from database')
+    : console.log('Data not found in the database');
+    
   return result?.value;
 };
 
